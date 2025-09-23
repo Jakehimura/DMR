@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danilo Rizzo - Consultor de Investimentos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #1d266a;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333333;
+            --gold: #c7a859;
+            --text-gray: #666666;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-gray) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('./images/hero-bg.jpg') ;
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 55%;
+            background: rgba(255,255,255,0.98);
+            padding: 3.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            margin-right: auto;
+}
+    
+        .logo {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .logo-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #0f1a4a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(29, 38, 106, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .partners-logos {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            max-width: 400px;
+        }
+
+        .partner-logo {
+            background: var(--white);
+            padding: 8px 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        /* Sobre Section */
+        .sobre {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .section-title {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .sobre-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .sobre-image {
+            text-align: center;
+        }
+
+        .profile-placeholder {
+            width: 300;
+            height: 300;
+            object-fit: cover;
+            border-radius: 5%;
+            margin: 0 auto;
+            display: block;
+}
+
+        .sobre-text h3 {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .sobre-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .highlight {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid var(--gold);
+        }
+
+        .highlight-number {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 2rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        /* Ecossistema Section */
+        .ecossistema {
+            padding: 100px 0;
+            background: var(--light-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-blue);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+       
+        .service-card h3 {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .service-btn {
+            background: var(--gold);
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: auto;
+        }
+
+        .service-btn:hover {
+            background: #b8965a;
+            transform: translateX(5px);
+        }
+
+        /* Parceiros Detalhados Section */
+        .parceiros-detalhados {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .parceiro-detalhado {
+            margin-bottom: 80px;
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .parceiro-detalhado:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .parceiro-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .parceiro-content.reverse {
+            grid-template-columns: 2fr 1fr;
+        }
+
+        .parceiro-logo {
+            text-align: center;
+            padding: 2rem;
+            background: var(--light-gray);
+            border-radius: 12px;
+        }
+
+        .parceiro-logo img {
+            max-width: 200px;
+            max-height: 100px;
+            object-fit: contain;
+        }
+
+        .parceiro-logo-text {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .parceiro-info h3 {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .parceiro-info p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-gray);
+        }
+
+        .parceiro-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .parceiro-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .parceiro-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .parceiro-btn {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .parceiro-btn:hover {
+            background: #0f1a4a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(29, 38, 106, 0.3);
+        }
+
+        /* Público Alvo Section */
+        .publico-alvo {
+            padding: 100px 0;
+            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
+                url('./images/publico-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .target-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--light-gray);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .target-item:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+
+        .target-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .quote {
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        /* Prova Social Section */
+        .prova-social {
+           
+        padding: 100px 0;
+            background: linear-gradient(rgba(29, 38, 106, 0.85), rgba(29, 38, 106, 0.85)), 
+                        url('./images/prova-social-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            position: relative;
+        }
+
+        .social-content {
+            text-align: center;
+        }
+
+        .media-logos {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .media-logo {
+            background: var(--white);
+            color: var(--primary-blue);
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .testimonial {
+            background: rgba(255,255,255,0.1);
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonial-quote {
+            font-size: 1.8rem;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* CTA Fixo */
+        .cta-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--gold);
+            color: var(--white);
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 8px 25px rgba(199, 168, 89, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .cta-fixed:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(199, 168, 89, 0.6);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .footer-section p, .footer-section a {
+            color: #cccccc;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                max-width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .sobre-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .partners-logos {
+                position: static;
+                justify-content: center;
+                margin-top: 2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .media-logos {
+                gap: 1rem;
+            }
+
+            .parceiro-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .parceiro-content.reverse {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="partners-logos">
+            <div class="partner-logo"><img src="./images/imagem01.png" alt="Genial Investimentos"></div>
+            <div class="partner-logo"><img src="./images/imagem03.png" alt="Grupo Fictor"></div>
+            <div class="partner-logo"><img src="./images/imagem04.png" alt="Bext"></div>
+            <div class="partner-logo"><img src="./images/imagem05.png" alt="AM Financial Peak"></div>
+            <div class="partner-logo"><img src="./images/imagem06.png" alt="Keller Williams"></div>
+            <div class="partner-logo"><img src="./images/imagem07.png" alt="Sofi"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="logo">DANILO RIZZO</div>
+                <div class="logo-subtitle">CONSULTOR DE INVESTIMENTOS</div>
+                
+                <h1>Inteligência financeira sob medida para quem quer mais do que promessas.</h1>
+                
+                <p>Você no centro. Estratégia, ética e independência para rentabilizar, proteger e transmitir seu patrimônio.</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://wa.me/5518991868282" class="btn btn-primary">Falar com Danilo</a>
+                    <a href="#ecossistema" class="btn btn-secondary">Conheça o Ecossistema</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre a Consultoria</h2>
+            
+            <div class="sobre-content">
+                <div class="sobre-image">
+                    <img src="./images/danilo.png" alt="Danilo Rizzo" class="profile-placeholder">
+                </div>
+                
+                <div class="sobre-text">
+                    <h3>Invista com Estratégia, Ética e Inteligência</h3>
+                    
+                    <p>Danilo Rizzo é investidor desde 2008, consultor autorizado pela CVM, especialista em investimentos com formação na Universidade de Genebra (Suíça), comentarista econômico na TV Fronteira e nas rádios CBN e Mix.</p>
+                    
+                    <p>Construiu uma carreira de 15 anos de experiência em governança corporativa e gestão de riscos. É analista técnico certificado pela APIMEC e desenvolveu uma ferramenta de inteligência artificial exclusiva, capaz de criar estratégias de investimento 100% personalizadas.</p>
+                    
+                    <div class="highlights">
+                        <div class="highlight">
+                            <div class="highlight-number">20+</div>
+                            <p>Anos de experiência</p>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-number">100%</div>
+                            <p>Atendimento independente</p>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-number">IA</div>
+                            <p>Ferramenta exclusiva</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecossistema Section -->
+    <section class="ecossistema" id="ecossistema">
+        <div class="container">
+            <h2 class="section-title">Ecossistema de Soluções</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Conheça Nossas Soluções Personalizadas — você pode usar todos ou apenas o que precisa</p>
+            
+            <div class="services-grid">
+                                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="./images/imagem01.png" alt="Genial Investimentos">
+                    </div>
+                    <h3>Genial Investimentos</h3>
+                    <p>Conta corrente, conta internacional, cartão sem tarifas, e plataforma com os melhores investimentos do Brasil.</p>
+                    <a href="#genial" class="service-btn">Saiba Mais</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="./images/imagem03.png" alt="Grupo Fictor"></div>
+                    <h3>Grupo Fictor</h3>
+                    <p>Fundos de investimentos com renda mensal e sem taxa de administração.</p>
+                    <a href="#fictor" class="service-btn">Saiba Mais</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"> 
+                        <img src="./images/imagem04.png" alt="Bext">
+                    </div>
+                    <h3>Bext</h3>
+                    <p>Crédito com garantia, financiamento de imóveis e veículos.</p>
+                    <a href="#bext" class="service-btn">Saiba Mais</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                      <img src="./images/imagem05.png" alt="AM Financial Peak">
+                      </div>
+                    <h3>AM Financial Peak</h3>
+                    <p>Investimentos diretos nas bolsas dos EUA e planejamento internacional.</p>
+                    <a href="#peak" class="service-btn">Saiba Mais</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="./images/imagem06.png" alt="Keller Williams">
+                        </div>
+                    <h3>Keller Williams</h3>
+                    <p>Imóveis nos EUA com renda passiva em dólar.</p>
+                    <a href="#keller" class="service-btn">Saiba Mais</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="./images/imagem07.png" alt="Sofi">
+                    </div>
+                    <h3>Sofi — IA para Pequenos Investidores</h3>
+                    <p>App gratuito para quem está começando com menos de R$100 mil.</p>
+                    <a href="#sofi" class="service-btn">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Público Alvo Section -->
+    <section class="publico-alvo" id="publico-alvo">
+        <div class="container">
+            <h2 class="section-title">Para quem é essa consultoria?</h2>
+            
+            <div class="target-grid">
+                <div class="target-item">
+                    <div class="target-icon">💼</div>
+                    <h3>Empresários</h3>
+                    <p>Gestão estratégica do patrimônio empresarial</p>
+                </div>
+                
+                <div class="target-item">
+                    <div class="target-icon">⚖️</div>
+                    <h3>Profissionais Liberais</h3>
+                    <p>Planejamento financeiro personalizado</p>
+                </div>
+                
+                <div class="target-item">
+                    <div class="target-icon">👥</div>
+                    <h3>Herdeiros</h3>
+                    <p>Preservação e crescimento patrimonial</p>
+                </div>
+                
+                <div class="target-item">
+                    <div class="target-icon">💰</div>
+                    <h3>Rentistas</h3>
+                    <p>Otimização de renda passiva</p>
+                </div>
+                
+                <div class="target-item">
+                    <div class="target-icon">🌎</div>
+                    <h3>Investidores Internacionais</h3>
+                    <p>Brasileiros que querem investir no exterior</p>
+                </div>
+            </div>
+            
+            <div class="quote">
+                "Se você valoriza transparência, sofisticação e resultado, encontrou o lugar certo."
+            </div>
+        </div>
+    </section>
+
+    <!-- Prova Social Section -->
+    <section class="prova-social" id="prova-social">
+        <div class="container">
+            <div class="social-content">
+                <h2 class="section-title" style="color: white;">Prova Social e Autoridade</h2>
+                
+                <div class="media-logos">
+                    <div class="media-logo">TV Fronteira</div>
+                    <div class="media-logo">CBN</div>
+                    <div class="media-logo">Mix</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-quote">
+                        "Não empurramos produtos. Planejamos com você, por você e para você."
+                    </div>
+                    <p><strong>— Danilo Rizzo, Consultor de Investimentos CVM</strong></p>
+                </div>
+                
+                <p style="font-size: 1.2rem; margin-top: 2rem;">
+                    Comentarista econômico reconhecido e consultor autorizado pela CVM com mais de 15 anos de experiência no mercado financeiro.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parceiros Detalhados Section -->
+    <section class="parceiros-detalhados" id="parceiros-detalhados">
+        <div class="container">
+            <h2 class="section-title">Conheça Nossos Parceiros</h2>
+            
+            <!-- Genial Investimentos -->
+            <div class="parceiro-detalhado" id="genial">
+                <div class="parceiro-content">
+                    <div class="parceiro-logo">
+                            <img src="./images/imagem01.png" alt="Genial Investimentos">
+                    </div>
+                    <div class="parceiro-info">
+                        <h3>Genial Investimentos</h3>
+                        <p>A Genial Investimentos é uma das principais corretoras independentes do Brasil, oferecendo uma plataforma completa de investimentos com foco na excelência do atendimento e diversidade de produtos.</p>
+                        <ul class="parceiro-features">
+                            <li>Conta corrente digital sem tarifas</li>
+                            <li>Conta internacional para investimentos no exterior</li>
+                            <li>Cartão de crédito sem anuidade</li>
+                            <li>Acesso aos melhores fundos do mercado</li>
+                            <li>Plataforma de investimentos completa</li>
+                            <li>Research próprio e independente</li>
+                        </ul>
+                        <p>Ideal para investidores que buscam uma plataforma robusta com ampla gama de produtos e atendimento personalizado.</p>
+                        <a href="https://wa.me/5518991868282" class="parceiro-btn">Abrir Conta Gratuita</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grupo Fictor -->
+            <div class="parceiro-detalhado" id="fictor">
+                <div class="parceiro-content reverse">
+                    <div class="parceiro-info">
+                        <h3>Grupo Fictor</h3>
+                        <p>O Grupo Fictor é especializado em fundos de investimento estruturados, oferecendo soluções inovadoras para geração de renda mensal consistente com estratégias sofisticadas de mercado.</p>
+                        <ul class="parceiro-features">
+                            <li>Fundos com renda mensal distribuída</li>
+                            <li>Zero taxa de administração em alguns produtos</li>
+                            <li>Estratégias diferenciadas de mercado</li>
+                            <li>Gestão ativa e profissional</li>
+                            <li>Transparência total nas operações</li>
+                            <li>Acompanhamento personalizado</li>
+                        </ul>
+                        <p>Perfeito para investidores que buscam renda passiva mensal com estratégias sofisticadas e custos reduzidos.</p>
+                        <a href="https://wa.me/5518991868282" class="parceiro-btn">Receber Apresentação</a>
+                    </div>
+                    <div class="parceiro-logo">
+                        <img src="./images/imagem03.png" alt="Grupo Fictor">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bext -->
+            <div class="parceiro-detalhado" id="bext">
+                <div class="parceiro-content">
+                    <div class="parceiro-logo">
+                        <img src="./images/imagem04.png" alt="Bext">
+                    </div>
+                    
+                    <div class="parceiro-info">
+                        <h3>Bext</h3>
+                        <p>A Bext é uma fintech especializada em soluções de crédito inteligentes, oferecendo produtos financeiros com garantia que proporcionam taxas mais atrativas e condições diferenciadas para seus clientes.</p>
+                        <ul class="parceiro-features">
+                            <li>Crédito com garantia de investimentos</li>
+                            <li>Financiamento de imóveis com condições especiais</li>
+                            <li>Crédito para aquisição de veículos</li>
+                            <li>Taxas de juros competitivas</li>
+                            <li>Processo 100% digital</li>
+                            <li>Análise rápida e aprovação ágil</li>
+                        </ul>
+                        <p>Ideal para quem precisa de crédito com taxas atrativas usando seus investimentos como garantia.</p>
+                        <a href="https://wa.me/5518991868282" class="parceiro-btn">Simular Agora</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AM Financial Peak -->
+            <div class="parceiro-detalhado" id="peak">
+                <div class="parceiro-content reverse">
+                    <div class="parceiro-info">
+                        <h3>AM Financial Peak</h3>
+                        <p>A AM Financial Peak é especializada em investimentos internacionais, oferecendo acesso direto às bolsas americanas e estratégias de dolarização de patrimônio para investidores brasileiros.</p>
+                        <ul class="parceiro-features">
+                            <li>Investimentos diretos nas bolsas dos EUA</li>
+                            <li>Abertura de conta nos Estados Unidos</li>
+                            <li>Planejamento de dolarização patrimonial</li>
+                            <li>Acesso a ETFs e ações americanas</li>
+                            <li>Consultoria em planejamento internacional</li>
+                            <li>Suporte completo para expatriação financeira</li>
+                        </ul>
+                        <p>Perfeito para investidores que buscam diversificação internacional e proteção cambial.</p>
+                        <a href="https://wa.me/5518991868282" class="parceiro-btn">Começar a Dolarizar</a>
+                    </div>
+                    <div class="parceiro-logo">
+                        <img src="./images/imagem05.png" alt="AM Financial Peak">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Keller Williams -->
+            <div class="parceiro-detalhado" id="keller">
+                <div class="parceiro-content">
+                    <div class="parceiro-logo">
+                        <img src="./images/imagem06.png" alt="Keller Williams">
+                    </div>
+                    <div class="parceiro-info">
+                        <h3>Keller Williams</h3>
+                        <p>A Keller Williams é a maior rede imobiliária do mundo, oferecendo oportunidades exclusivas de investimento em imóveis americanos com potencial de renda passiva em dólares.</p>
+                        <ul class="parceiro-features">
+                            <li>Imóveis residenciais nos EUA</li>
+                            <li>Propriedades para investimento com renda</li>
+                            <li>Gestão completa dos imóveis</li>
+                            <li>Renda passiva mensal em dólares</li>
+                            <li>Assessoria jurídica especializada</li>
+                            <li>Acompanhamento pós-compra</li>
+                        </ul>
+                        <p>Ideal para investidores que buscam diversificação através de imóveis no exterior com renda em dólar.</p>
+                        <a href="https://wa.me/5518991868282" class="parceiro-btn">Ver Oportunidades</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sofi -->
+            <div class="parceiro-detalhado" id="sofi">
+                <div class="parceiro-content reverse">
+                    <div class="parceiro-info">
+                        <h3>Sofi — IA para Pequenos Investidores</h3>
+                        <p>A Sofi é uma plataforma inovadora que utiliza inteligência artificial para democratizar o acesso a estratégias de investimento sofisticadas, especialmente desenvolvida para pequenos e médios investidores.</p>
+                        <ul class="parceiro-features">
+                            <li>Aplicativo 100% gratuito</li>
+                            <li>Inteligência artificial exclusiva</li>
+                            <li>Estratégias personalizadas</li>
+                            <li>Ideal para patrimônios até R$ 100 mil</li>
+                            <li>Educação financeira integrada</li>
+                            <li>Suporte especializado</li>
+                        </ul>
+                        <p>Perfeito para quem está começando a investir e quer ter acesso a estratégias inteligentes sem custo.</p>
+                        <a href="https://wa.me/5518991868282" class="parceiro-btn">Conhecer a Sofi</a>
+                    </div>
+                    <div class="parceiro-logo">
+                        <img src="./images/imagem07.png" alt="Sofi">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>📍 Presidente Prudente, SP</p>
+                    <p>(atendimento nacional e internacional)</p>
+                    <a href="mailto:investimentos@dmrizzo.com.br">📧 investimentos@dmrizzo.com.br</a>
+                    <a href="https://wa.me/5518991868282">📱 (18) 99186-8282</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <a href="https://instagram.com/danilorizzoinvest">📱 @danilorizzoinvest</a>
+                    <a href="https://dmrizzo.com.br">🌐 www.dmrizzo.com.br</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="#">📃 Políticas de privacidade</a>
+                    <a href="#">📋 Termos de uso</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Danilo Rizzo - Consultor de Investimentos CVM. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CTA Fixo -->
+    <a href="https://wa.me/5518991868282" class="cta-fixed">
+        💬 Agende uma conversa
+    </a>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to CTA button
+        window.addEventListener('scroll', () => {
+            const ctaButton = document.querySelector('.cta-fixed');
+            if (window.scrollY > 100) {
+                ctaButton.style.opacity = '1';
+            } else {
+                ctaButton.style.opacity = '0.8';
+            }
+        });
+
+        // Add animation to service cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Animate service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Animate target items
+        document.querySelectorAll('.target-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'all 0.6s ease';
+            observer.observe(item);
+        });
+
+        // Animate parceiro cards
+        document.querySelectorAll('.parceiro-detalhado').forEach(parceiro => {
+            parceiro.style.opacity = '0';
+            parceiro.style.transform = 'translateY(30px)';
+            parceiro.style.transition = 'all 0.8s ease';
+            observer.observe(parceiro);
+        });
+    </script>
+</body>
+</html>
