@@ -454,14 +454,11 @@
         /* Prova Social Section */
         .prova-social {
            
-        padding: 100px 0;
-            background: linear-gradient(rgba(29, 38, 106, 0.85), rgba(29, 38, 106, 0.85)), 
-                        url('./images/prova-social-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: var(--white);
-            position: relative;
+           display: grid;
+           grid-template-columns: 1.2fr 2fr 1fr;  /* <-- 3 colunas! */
+           gap: 2.5rem;
+           margin-top: 3rem;
+           align-items: start;
         }
 
         .social-content {
