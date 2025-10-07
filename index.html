@@ -452,48 +452,63 @@
         }
 
         /* Prova Social Section */
-        .prova-social {
-           
-           display: grid;
-           grid-template-columns: 1.2fr 2fr 1fr;  /* <-- 3 colunas! */
-           gap: 2.5rem;
-           margin-top: 3rem;
-           align-items: start;
+       .prova-social {
+            padding: 150px 0;
+            background: linear-gradient(rgba(29, 38, 106, 0.85), rgba(29, 38, 106, 0.85)), 
+        url('./images/imgdefundo02.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
-        .social-content {
-            text-align: center;
+        .prova-social-grid {
+            display: grid;
+            grid-template-columns: 2fr 4fr 2fr;
+            gap: 5rem;
+            margin-top: 3rem;
+            align-items: start;
+            padding: 0 2rem;
         }
 
-        .media-logos {
+        .prova-video-container {
             display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin: 3rem 0;
-            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 0 1rem;
+            margin-left: -1rem; 
         }
 
-        .media-logo {
-            background: var(--white);
-            color: var(--primary-blue);
-            padding: 15px 25px;
-            border-radius: 8px;
-            font-weight: 600;
+        .prova-video {
+            width: 110%;
+            max-width: 500px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            transform: none;
+            margin-left: -40px; 
         }
 
-        .testimonial {
-            background: rgba(255,255,255,0.1);
-            padding: 3rem;
+        .prova-text {
+            color: var(--white);
+            padding: 0 2rem;
+            text-align: justify;
+            margin: 1rem 0;
+            max-width: 100%
+        }
+
+        .prova-foto {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+             padding: 0 1rem;
+        }
+
+        .dmr-photo {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
             border-radius: 12px;
-            margin: 3rem 0;
-            backdrop-filter: blur(10px);
-        }
-
-        .testimonial-quote {
-            font-size: 1.8rem;
-            font-style: italic;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            object-fit: cover;
         }
 
         /* CTA Fixo */
