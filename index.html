@@ -421,19 +421,9 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 3rem;
-            max-width: 900px;
+            max-width: 1000px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .target-grid .target-item:nth-child(4) {
-            grid-column: 1 / 2;
-            margin-left: 25%;
-        }
-
-        .target-grid .target-item:nth-child(5) {
-            grid-column: 2 / 3;
-            margin-right: 25%;
         }
 
         .target-item {
@@ -442,6 +432,18 @@
             background: var(--light-gray);
             border-radius: 12px;
             transition: all 0.3s ease;
+        }
+
+        .target-grid .target-item:nth-child(4) {
+            grid-column: 1 / 2;
+            margin-left: auto;
+            margin-right: 1rem;
+        }
+
+        .target-grid .target-item:nth-child(5) {
+            grid-column: 2 / 3;
+            margin-left: 1rem;
+            margin-right: auto;
         }
 
         .target-item:hover {
