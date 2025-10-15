@@ -308,104 +308,156 @@
         }
 
         /* Parceiros Detalhados Section */
-        .parceiros-detalhados {
-            padding: 100px 0;
-            background: var(--white);
-        }
+       .parceiros-detalhados {
+    padding: 100px 0;
+    background: var(--white);
+}
 
-        .parceiro-detalhado {
-            margin-bottom: 80px;
-            padding: 60px 0;
-            border-bottom: 1px solid #eee;
-        }
+.parceiro-detalhado {
+    margin-bottom: 80px;
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
 
-        .parceiro-detalhado:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
+.parceiro-detalhado:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
 
-        .parceiro-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-            align-items: center;
-        }
+/* Fundos individuais para cada parceiro */
+.parceiro-detalhado:nth-child(2) {
+    background: linear-gradient(rgba(29, 38, 106, 0.7), rgba(29, 38, 106, 0.7)), 
+        url('./images/fdimgp01.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-        .parceiro-content.reverse {
-            grid-template-columns: 2fr 1fr;
-        }
+.parceiro-detalhado:nth-child(3) {
+    background: linear-gradient(rgba(41, 98, 255, 0.7), rgba(41, 98, 255, 0.7)), 
+        url('./images/fdimgp02.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-        .parceiro-logo {
-            text-align: center;
-            padding: 2rem;
-            background: var(--light-gray);
-            border-radius: 12px;
-        }
+.parceiro-detalhado:nth-child(4) {
+    background: linear-gradient(rgba(30, 144, 255, 0.7), rgba(30, 144, 255, 0.7)), 
+        url('./images/fdimgp03.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-        .parceiro-logo img {
-            max-width: 200px;
-            max-height: 100px;
-            object-fit: contain;
-        }
+.parceiro-detalhado:nth-child(5) {
+    background: linear-gradient(rgba(0, 128, 128, 0.7), rgba(0, 128, 128, 0.7)), 
+        url('./images/fdimgp04.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-        .parceiro-logo-text {
-            font-family: 'Saira Condensed', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-        }
+.parceiro-detalhado:nth-child(6) {
+    background: linear-gradient(rgba(70, 130, 180, 0.7), rgba(70, 130, 180, 0.7)), 
+        url('./images/fdimgp05.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-        .parceiro-info h3 {
-            font-family: 'Saira Condensed', sans-serif;
-            font-size: 2.2rem;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-        }
+.parceiro-detalhado:nth-child(7) {
+    background: linear-gradient(rgba(0, 191, 255, 0.7), rgba(0, 191, 255, 0.7)), 
+        url('./images/fdimgp06.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-        .parceiro-info p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            color: var(--text-gray);
-        }
+.parceiro-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+}
 
-        .parceiro-features {
-            list-style: none;
-            margin: 2rem 0;
-        }
+.parceiro-content.reverse {
+    grid-template-columns: 2fr 1fr;
+}
 
-        .parceiro-features li {
-            padding: 0.5rem 0;
-            position: relative;
-            padding-left: 1.5rem;
-        }
+.parceiro-logo {
+    text-align: center;
+    padding: 2rem;
+    background: var(--light-gray);
+    border-radius: 12px;
+}
 
-        .parceiro-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--gold);
-            font-weight: bold;
-        }
+.parceiro-logo img {
+    max-width: 200px;
+    max-height: 100px;
+    object-fit: contain;
+}
 
-        .parceiro-btn {
-            background: var(--primary-blue);
-            color: var(--white);
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-            margin-top: 1rem;
-        }
+.parceiro-logo-text {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
 
-        .parceiro-btn:hover {
-            background: #0f1a4a;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(29, 38, 106, 0.3);
-        }
+.parceiro-info h3 {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 2.2rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+}
 
+.parceiro-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-gray);
+}
+
+.parceiro-features {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.parceiro-features li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.parceiro-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.parceiro-btn {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.parceiro-btn:hover {
+    background: #0f1a4a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(29, 38, 106, 0.3);
+}
         /* Público Alvo Section */
         .publico-alvo {
             padding: 100px 0;
